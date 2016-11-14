@@ -9,7 +9,7 @@ class Node:
         self.l = None
         self.r = None
         self.v = val
-######################################################        
+######################################################
 
 # Iterate over the attributes set and create all possible combinations
 # for those attributes' set
