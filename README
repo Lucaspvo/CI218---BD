@@ -1,0 +1,60 @@
+CURITIBA - 25/11/2016 - UFPR - DINF - BCC/IBM
+CI218 - INTRODUÇÃO A BANCO DE DADOS
+
+-----------------------------------------------------------------------------------
+
+TRABALHO
+
+AUTORES: 
+			GRR20113495 - Lucas Pazelo Vargas de Oliveira
+			GRR20114423 - Rafaela Barbirato Ferreira
+
+-----------------------------------------------------------------------------------
+
+Este pacote possui os seguintes arquivos:
+
+	normaliza.py
+	README.txt
+
+-----------------------------------------------------------------------------------
+*** OBSERVACAO: CONSIDERAR O FORMATO DO ARQUIVO DOS TESTES COM A QUANTIDADE DE DF'S *** 
+
+*** Ate a data de entrega do presente trabalho, nao se tem conhecimento por parte dos integrantes da ocorrencia de quaisquer bugs ou erros *** 
+
+-----------------------------------------------------------------------------------
+
+Execucao do trabalho: python normaliza.py < teste.in > saida.out
+
+-----------------------------------------------------------------------------------
+
+O arquivo normaliza.py contém as seguintes funcionalidades:
+
+	class Node: - classe criada para o armazenamento das relações resultantes da decomposição FNBC, onde self.l e self.r seriam os nodos correspondentes aos filhos esquerdo e direito na arvore e 		self.v corresponde ao conjuntos dos atributos da relacao armazenada no nodo atual;
+
+
+	def subsets(s): - realiza uma chamada para a funcao powerset(iterable) a qual realiza a combinacao de todos os subconjuntos dos atributos de R, retornando o conjunto potencia;
+
+
+	def find_subsets_closures: - essa funcao eh utilizada por ambas normalizacoes (FNBC e 3FN). A mesma percorre todo o conjunto potencia selecionando cada subconjunto e criando o seu respectivo 		fecho. Tal fecho eh construido a partir da comparacao entre os atributos do fecho atual e dos atributos do lado esquerdo da dependencia funcional. Quando o lado esquerdo da df estiver contido 	no fecho o lado direito da df sera adicionado ao mesmo. 
+
+	A condicao abaixo foi definida tendo em vista que o fecho a ser definido ira variar para o FNBC e para o 3FN, sendo que para o FNBC a cada chamada da funcao decompositionFNBC o conjunto dos 		atributos da relacao atual nao eh o mesmo do conjunto de atributos da relacao original, e por isso devera possuir um fecho diferente.
+	
+	if (normalization == "FNBC"):
+			set_closure = set_of_cls - (set_of_cls - v_attr)
+	else:
+			set_closure = set_of_cls
+
+
+	def candidate_keys: - percorre os fechos de todos os conjuntos potencia para encontrar aquele que contem todos os atributos da relacao;
+
+
+	def decompositionFNBC: - normalizacao de acordo com a forma normal de boyce-codd. Nessa funcao as relacoes obtidas nos passos da normalizacao sao salvas na estrutura de uma arvore binaria 		(definida pela classe Node) em que as folhas sao as relacoes finais resultantes da decomposicao.
+
+
+	def decomposition3FN: - normalizacao de acordo com a terceira forma normal. 
+
+	
+	def print_fnbc: - funcao definida para a impressao das relacoes resultantes da normalizacao FNBC
+
+
+	def print_3fn: - funcao definida para a impressao das relacoes resultantes da normalizacao 3FN

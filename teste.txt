@@ -1,9 +1,0 @@
-3FN
-R(A,B,C,D,E,F,G,H)
-A,B,H->C
-C->E
-F->A,D
-B,H->E
-A->D
-B,G,H->F
-E->F
