@@ -1,0 +1,7 @@
+FNBC
+R(A,B,C,D,E,F)
+4
+A->F
+A,B->C,D
+D->B
+D->E

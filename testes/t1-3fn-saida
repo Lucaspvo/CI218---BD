@@ -1,0 +1,14 @@
+
+R(A,B,C,D)
+chave: A,D
+
+R1(A,B,C)
+chave: A,B
+
+R2(B,D)
+chave: D
+
+R3(A,D)
+chave: A,D
+
+resultado: R1,R2,R3

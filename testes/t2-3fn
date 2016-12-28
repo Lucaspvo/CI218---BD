@@ -1,0 +1,7 @@
+3FN
+R(A,B,C,D,E)
+4
+A,B->C
+C->D
+D->B,E
+A,D->E

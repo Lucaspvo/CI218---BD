@@ -1,0 +1,6 @@
+FNBC
+R(A,B,C,D)
+2
+A,B->C
+B->C
+

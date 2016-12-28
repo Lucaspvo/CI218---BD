@@ -1,0 +1,17 @@
+
+R(acao,agente,cia,dividendo,investidor,qtdAcao)
+chave: acao,investidor
+
+R1(acao,dividendo)
+chave: acao
+
+R2(agente,investidor)
+chave: investidor
+
+R3(agente,cia)
+chave: agente
+
+R4(acao,investidor,qtdAcao)
+chave: acao,investidor
+
+resultado: R1,R2,R3,R4

@@ -1,0 +1,17 @@
+
+R(epocaVisit,idAtrativo,idPolo,nomeAtrat,nomePolo,subtipo,tipo)
+chave: idAtrativo,subtipo
+
+R1(epocaVisit,idAtrativo,idPolo,nomeAtrat,nomePolo,tipo)
+chave: idAtrativo
+
+R2(idAtrativo,subtipo)
+chave: idAtrativo,subtipo
+
+R3(idPolo,nomePolo)
+chave: idPolo
+
+R4(epocaVisit,idAtrativo,idPolo,nomeAtrat,tipo)
+chave: idAtrativo
+
+resultado: R2,R3,R4

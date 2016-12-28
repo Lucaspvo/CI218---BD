@@ -1,0 +1,7 @@
+FNBC
+R(idPolo,nomePolo,idAtrativo,tipo,subtipo,nomeAtrat,epocaVisit)
+4
+idPolo->nomePolo
+idAtrativo->nomeAtrat,idPolo,tipo,epocaVisit
+subtipo->tipo
+subtipo->epocaVisit

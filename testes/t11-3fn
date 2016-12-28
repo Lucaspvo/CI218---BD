@@ -1,0 +1,7 @@
+3FN
+R(agente,cia,investidor,acao,qtdAcao,dividendo)
+4
+acao->dividendo
+investidor->agente
+agente->cia
+investidor,acao->qtdAcao

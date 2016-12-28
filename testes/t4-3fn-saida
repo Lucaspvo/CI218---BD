@@ -1,0 +1,14 @@
+
+R(cabelo,idade,nome,rg,tel)
+chave: rg,tel
+
+R1(cabelo,idade)
+chave: idade
+
+R2(idade,nome,rg)
+chave: rg
+
+R3(rg,tel)
+chave: rg,tel
+
+resultado: R1,R2,R3

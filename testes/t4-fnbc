@@ -1,0 +1,5 @@
+FNBC
+R(nome,rg,idade,cabelo,tel)
+2
+rg->nome,idade
+idade->cabelo
